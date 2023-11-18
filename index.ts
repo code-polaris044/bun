@@ -8,3 +8,10 @@ console.log(
     T: "U ",
   })
 );
+
+Bun.serve({
+  port: 3000,
+  async fetch(request, server) {
+    return new Response("Hello World");
+  },
+});
